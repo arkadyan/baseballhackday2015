@@ -9538,3 +9538,17 @@ input[type="checkbox"] {
   height: 20em;
   overflow-y: auto;
 }
+
+/* line 127, ../scss/_groupieology.scss */
+label {
+  font-size: 1rem;
+}
+/* line 130, ../scss/_groupieology.scss */
+input[type="checkbox"] + label {
+  margin-left: 0rem;
+}
+
+/* line 135, ../scss/_groupieology.scss */
+div.th {
+  padding-top: 0.8em;
+}
