@@ -44,8 +44,19 @@ $(function() {
     },
 
     team: function(id) {
+      // Update the select box to correspond to the team we are looking at
       $('select[id="teams"]').val(id);
-      Hackday.app.getEventsForTeam();
+
+      /* update the model */
+      Hackday.team.set('team', id);
+      Hackday.team.fetch().success(function() {
+        $('#content').empty();
+        var view = new Hackday.TeamView({
+          model: Hackday.team
+        });
+
+        $('#content').append(view.render().el);
+      });
     }
   });
 
@@ -59,20 +70,6 @@ $(function() {
       var team = $('select[id="teams"]').val();
       Hackday.router.navigate('team/' + team, {trigger: true});
     },
-		getEventsForTeam: function() {
-			var team = $('select[id="teams"]').val();
-
-			/* update the model */
-			Hackday.team.set('team', team);
-			Hackday.team.fetch().success(function() {
-				$('#content').empty();
-				var view = new Hackday.TeamView({
-					model: Hackday.team
-				});
-
-				$('#content').append(view.render().el);
-			});
-		},
 		mapIt: function() {
 			/* get the selected elements */
 			var selected = $('#content').find('input:checked');
