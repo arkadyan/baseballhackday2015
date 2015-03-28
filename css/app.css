@@ -9504,3 +9504,14 @@ input[type="checkbox"] {
   width: 120px;
   overflow: hidden;
 }
+
+/* line 43, ../scss/app.scss */
+.ui-menu {
+  width: 12em;
+}
+/* line 46, ../scss/app.scss */
+.ui-menu .ui-menu {
+  width: 15em;
+  height: 20em;
+  overflow-y: auto;
+}
