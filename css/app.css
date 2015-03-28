@@ -9459,37 +9459,47 @@ footer a {
   }
 }
 
-/* line 55, ../scss/_groupieology.scss */
+/* line 53, ../scss/_groupieology.scss */
+.th ul li {
+  list-style: none;
+}
+
+/* line 57, ../scss/_groupieology.scss */
+input[type="checkbox"] {
+  margin: 0 1rem 1rem 0;
+}
+
+/* line 63, ../scss/_groupieology.scss */
 .performer {
   height: 80px;
   width: auto;
   float: left;
   margin-right: .6rem;
 }
-/* line 61, ../scss/_groupieology.scss */
+/* line 69, ../scss/_groupieology.scss */
 .performer:hover {
   background: #f4f4f4;
 }
 
-/* line 65, ../scss/_groupieology.scss */
+/* line 73, ../scss/_groupieology.scss */
 .performer-photo {
   width: 80px;
   overflow: hidden;
 }
 
-/* line 69, ../scss/_groupieology.scss */
+/* line 77, ../scss/_groupieology.scss */
 .performer-name {
   display: inline-block;
   margin: 25px 10px;
 }
 
-/* line 73, ../scss/_groupieology.scss */
+/* line 81, ../scss/_groupieology.scss */
 .event-map {
   width: 100%;
   height: 400px;
 }
 
-/* line 77, ../scss/_groupieology.scss */
+/* line 85, ../scss/_groupieology.scss */
 .performer-detail-photo {
   width: 120px;
   overflow: hidden;
