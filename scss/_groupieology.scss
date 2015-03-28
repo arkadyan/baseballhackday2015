@@ -112,3 +112,26 @@ input[type="checkbox"] {
 //	background-image: url('img/headphones.svg');
 //	background-repeat: no-repeat;
 //}
+
+.ui-menu {
+  width: 12em;
+
+  .ui-menu {
+    width: 15em;
+    height: 20em;
+    overflow-y: auto;
+  }
+}
+
+
+label {
+  font-size: 1rem;
+
+  input[type="checkbox"] + & {
+    margin-left: 0rem;
+  }
+}
+
+div.th {
+  padding-top: 0.8em;
+}

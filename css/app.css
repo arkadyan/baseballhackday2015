@@ -9528,13 +9528,27 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
-/* line 43, ../scss/app.scss */
+/* line 116, ../scss/_groupieology.scss */
 .ui-menu {
   width: 12em;
 }
-/* line 46, ../scss/app.scss */
+/* line 119, ../scss/_groupieology.scss */
 .ui-menu .ui-menu {
   width: 15em;
   height: 20em;
   overflow-y: auto;
+}
+
+/* line 127, ../scss/_groupieology.scss */
+label {
+  font-size: 1rem;
+}
+/* line 130, ../scss/_groupieology.scss */
+input[type="checkbox"] + label {
+  margin-left: 0rem;
+}
+
+/* line 135, ../scss/_groupieology.scss */
+div.th {
+  padding-top: 0.8em;
 }
