@@ -202,6 +202,7 @@ $(function() {
 			$('#content').empty();
 			Groupieology.events.fetch();
 			Groupieology.currentArtist = parseInt(id, 10);
+      $('#search').val(id);
 		}
 	});
 
