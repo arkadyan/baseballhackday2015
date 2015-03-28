@@ -9,7 +9,7 @@
 }
 
 footer {
-	padding: 3rem 0; 
+	padding: 3rem 0;
 	line-height: 1.5;
 	background-color: #ddd;
 	color: #777;
@@ -19,10 +19,10 @@ footer {
 	}
 }
 
-// Search box style 
+// Search box style
 
 .input-search {
-	font-size: rem-calc(26); 
+	font-size: rem-calc(26);
 	height: rem-calc(32);
 	font-weight: 300;
 	padding: 0;
@@ -45,7 +45,7 @@ footer {
 	border-radius: 4px;
 	margin-bottom: 1rem;
 	@media #{$medium-up} {
-    	font-size: rem-calc(50); 
+    	font-size: rem-calc(50);
 		height: rem-calc(70);
   	}
 }
@@ -74,6 +74,7 @@ input[type="checkbox"] {
 
 .eventtitle i:nth-child(2) {
   margin-left:5px;
+}
 
 
 // artist results style
