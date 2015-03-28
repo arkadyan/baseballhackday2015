@@ -52,9 +52,13 @@ $(function() {
   Hackday.AppView = Backbone.View.extend({
 		el: '#hackday-app',
 		events: {
-			'change #teams': 'getEventsForTeam',
+			'change #teams': 'navigateToTeam',
 			'click #mapit': 'mapIt'
 		},
+    navigateToTeam: function() {
+      var team = $('select[id="teams"]').val();
+      Hackday.router.navigate('team/' + team, {trigger: true});
+    },
 		getEventsForTeam: function() {
 			var team = $('select[id="teams"]').val();
 
@@ -149,7 +153,7 @@ $(function() {
 
 	Hackday.team = new Hackday.Team();
 	Hackday.events = new Hackday.Events();
+	Hackday.app = new Hackday.AppView();
   Hackday.router = new Hackday.Router();
   Backbone.history.start();
-	Hackday.app = new Hackday.AppView();
 });
