@@ -34,39 +34,43 @@
     <div class="row container-searchbox" >
       <div class="large-10 large-offset-1 columns ">
 
-        <select id="teams" name="team-select">
-          <option>Select Your Team</option>
-          <option value='30'>Arizona Diamondbacks</option>
-          <option value='2'>Atlanta Braves</option>
-          <option value='25'>Baltimore Orioles</option>
-          <option value='21'>Boston Red Sox</option>
-          <option value='11'>Chicago Cubs</option>
-          <option value='23'>Chicago White Sox</option>
-          <option value='26'>Cincinnati Reds</option>
-          <option value='6'>Cleveland Indians</option>
-          <option value='7'>Colorado Rockies</option>
-          <option value='12'>Detroit Tigers</option>
-          <option value='20'>Houston Astros</option>
-          <option value='5'>Kansas City Royals</option>
-          <option value='28'>Los Angeles Angels</option>
-          <option value='1'>Los Angeles Dodgers</option>
-          <option value='29'>Miami Marlins</option>
-          <option value='15'>Milwaukee Brewers</option>
-          <option value='19'>Minnesota Twins</option>
-          <option value='3'>New York Mets</option>
-          <option value='8'>New York Yankees</option>
-          <option value='14'>Oakland Athletics</option>
-          <option value='18'>Philadelphia Phillies</option>
-          <option value='10'>Pittsburgh Pirates</option>
-          <option value='24'>San Diego Padres</option>
-          <option value='22'>San Francisco Giants</option>
-          <option value='13'>Seattle Mariners</option>
-          <option value='27'>St. Louis Cardinals</option>
-          <option value='4'>Tampa Bay Rays</option>
-          <option value='16'>Texas Rangers</option>
-          <option value='17'>Toronto Blue Jays</option>
-          <option value='9'>Washington Nationals</option>
-        </select>
+        <ul id="teams" name="team-select">
+          <li>
+            Select Your Team
+            <ul>
+              <li data-team-id='30'><i class="bb-ari"></i> Arizona Diamondbacks</li>
+              <li data-team-id='2'><i class="bb-atl"></i> Atlanta Braves</li>
+              <li data-team-id='25'><i class="bb-bal"></i> Baltimore Orioles</li>
+              <li data-team-id='21'><i class="bb-bos"></i>  Boston Red Sox</li>
+              <li data-team-id='11'><i class="bb-chn"></i> Chicago Cubs</li>
+              <li data-team-id='23'><i class="bb-cha"></i> Chicago White Sox</li>
+              <li data-team-id='26'><i class="bb-cin"></i> Cincinnati Reds</li>
+              <li data-team-id='6'><i class="bb-cle"></i> Cleveland Indians</li>
+              <li data-team-id='7'><i class="bb-col"></i> Colorado Rockies</li>
+              <li data-team-id='12'><i class="bb-det"></i> Detroit Tigers</li>
+              <li data-team-id='20'><i class="bb-hou"></i> Houston Astros</li>
+              <li data-team-id='5'><i class="bb-kca"></i> Kansas City Royals</li>
+              <li data-team-id='28'><i class="bb-ana"></i> Los Angeles Angels</li>
+              <li data-team-id='1'><i class="bb-lan"></i> Los Angeles Dodgers</li>
+              <li data-team-id='29'><i class="bb-mia"></i> Miami Marlins</li>
+              <li data-team-id='15'><i class="bb-mil"></i> Milwaukee Brewers</li>
+              <li data-team-id='19'><i class="bb-min"></i> Minnesota Twins</li>
+              <li data-team-id='3'><i class="bb-nyn"></i> New York Mets</li>
+              <li data-team-id='8'><i class="bb-nya"></i> New York Yankees</li>
+              <li data-team-id='14'><i class="bb-oak"></i> Oakland Athletics</li>
+              <li data-team-id='18'><i class="bb-phi"></i> Philadelphia Phillies</li>
+              <li data-team-id='10'><i class="bb-pit"></i> Pittsburgh Pirates</li>
+              <li data-team-id='24'><i class="bb-sdn"></i> San Diego Padres</li>
+              <li data-team-id='22'><i class="bb-sfn"></i> San Francisco Giants</li>
+              <li data-team-id='13'><i class="bb-sea"></i> Seattle Mariners</li>
+              <li data-team-id='27'><i class="bb-sln"></i> St. Louis Cardinals</li>
+              <li data-team-id='4'><i class="bb-tba"></i> Tampa Bay Rays</li>
+              <li data-team-id='16'><i class="bb-tex"></i> Texas Rangers</li>
+              <li data-team-id='17'><i class="bb-tor"></i> Toronto Blue Jays</li>
+              <li data-team-id='9'><i class="bb-was"></i> Washington Nationals</li>
+            </ul>
+          </li>
+        </ul>
 
       </div>
     </div>
@@ -98,9 +102,17 @@
     </footer>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC1tyhLTzdZEtr-4Lj9txTum3cyQcmXf0E&sensor=false"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript" src="js/underscore-min.js"></script>
     <script type="text/javascript" src="js/backbone-min.js"></script>
     <script type="text/javascript" src="js/hackday.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        $("#teams").menu();
+      });
+    </script>
 
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>

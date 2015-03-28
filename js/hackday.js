@@ -63,11 +63,11 @@ $(function() {
   Hackday.AppView = Backbone.View.extend({
 		el: '#hackday-app',
 		events: {
-			'change #teams': 'navigateToTeam',
+			'click #teams ul li': 'navigateToTeam',
 			'click #mapit': 'mapIt'
 		},
-    navigateToTeam: function() {
-      var team = $('select[id="teams"]').val();
+    navigateToTeam: function(event) {
+      var team = $(event.target).data().teamId;
       Hackday.router.navigate('team/' + team, {trigger: true});
     },
 		mapIt: function() {
