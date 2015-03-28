@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Groupieology</title>
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC1tyhLTzdZEtr-4Lj9txTum3cyQcmXf0E&sensor=false"></script>
+    <script>
+function initialize() {
+  var poly;
+
+  var Concerts = [{
+      name: "Marina Bay Sands Hotel",
+      latlng: new google.maps.LatLng(1.28319, 103.86)
+    }, {
+      name: "Perth Arena",
+      latlng: new google.maps.LatLng(-31.9493, 115.852)
+    }, {
+      name: "Adelaide Oval",
+      latlng: new google.maps.LatLng(-34.9155, 138.596)
+    }, {
+      name: "Allphones Arena (Acer Arena)",
+      latlng: new google.maps.LatLng(-33.8479, 151.067)
+    }];
+
+  var mapOptions = {
+    zoom: 0,
+    center: new google.maps.LatLng(0, 0),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var polyOptions = {
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 4
+  }
+
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+  poly = new google.maps.Polyline(polyOptions);
+  poly.setMap(map);
+
+  var path = poly.getPath();
+  var latlngbounds = new google.maps.LatLngBounds();
+
+  var markers = Array();
+  var infoWindows = Array();
+
+  for (var i = 0; i < Concerts.length; i++) {
+      var marker = new google.maps.Marker( {
+        position: Concerts[i].latlng,
+        map: map,
+        title: Concerts[i].name,
+        infoWindowIndex: i
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+          content: marker.title
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+
+        infoWindows[this.infoWindowIndex].open(map, this);
+      });
+
+      infoWindows.push(infoWindow);
+      path.push(Concerts[i].latlng);
+      latlngbounds.extend(Concerts[i].latlng);
+  }
+
+  map.fitBounds(latlngbounds);
+}
+
+google.maps.event.addDomListener( window, 'load', initialize );
+</script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>

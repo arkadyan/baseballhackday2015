@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groupieology: Re-live concert experiences of your favorite musicians</title>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,700|Audiowide' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- Open Graph: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/
+    Twitter: https://dev.twitter.com/docs/cards/types/summary-card
+    ============================== -->
+    <meta property="og:title" content="Groupieology"/>
+    <meta property="og:site_name" content="Groupieology"/>
+    <meta property="og:url" content="Groupieology.com"/>
+    <meta property="og:description" content="Re-live past concert venue experiences and get tickets for upcoming concerts for my favorite musicians"/>
+    <!--<meta property="og:image" content="http://IMAGEURL"/> -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Groupieology">
+    <meta name="twitter:title" content="Groupieology">
+    <meta name="twitter:description" content="Re-live past concert venue experiences and get tickets for upcoming concerts for my favorite musicians">
+    <!--<meta name="twitter:image" content="http://IMAGEURL">-->
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+
+
+  <body id="groupiology-app">
+    <header class="row">
+      <div class="large-12 columns">
+        <h1 class="logo"><i class="fa fa-headphones"></i> Groupieology</h1>
+      </div>
+    </header>
+
+    <div class="row container-searchbox" >
+      <div class="large-10 large-offset-1 columns ">
+
+        <input id="search" class="js-search-input input-search" placeholder="Type artist/band name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns content-container">
+
+        <div id="content" class="content">
+
+        </div>
+
+        <div id="event-map" class="event-map">
+
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="row">
+        <div class="large-10 large-offset-1 columns">
+           <strong class="logo">Groupieology.com</strong> Project for <a href="https://geekli.st/hackathon/52fb465881bd285300017c6d">Slashathon</a> as part of <a href="http://sxsw.com/">SXSW</a> in Austin, TX on March 12, 2014<br>
+           <a href="https://github.com/everett-toews/groupieology"><i class="fa fa-github"></i>GitHub project page</a><br>
+  Team members: <a href="https://github.com/everett-toews">Everett Toews</a>, <a href="https://github.com/annegentle">Anne Gentle</a>, <a href="https://github.com/kdavisk6">Kevin Davis</a>, and <a href="https://github.com/DaigoFuji">Daigo Fujiwara</a><br>
+            Powered by <a href="http://www.rackspace.com/">Rackspace</a>, <a href="http://platform.seatgeek.com/">SeatGeek API</a>, Google Maps, Backbone JS, and Foundation. Thanks to <a href="https://geekli.st/">GeekList</a>!
+
+        </div>
+      </div>
+    </footer>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC1tyhLTzdZEtr-4Lj9txTum3cyQcmXf0E&sensor=false"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/backbone-min.js"></script>
+    <script type="text/javascript" src="js/groupieology.js"></script>
+
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Backbone view templates -->
+
+    <script type="text/template" id="search-result-template">
+      <a href="#/artist/<%- id %>" data-artist-id="<%- id %>" class="performer-link">
+        <div class="th left performer-photo"><img src="<%= image ? image : 'img/music.png' %>" alt=""></div> <span class="performer-name"><%- name %></span>
+      </a>
+    </script>
+
+    <script type="text/template" id="performer-template">
+        <div class="th right performer-detail-photo"><img src="<%= image ? image : 'img/music.png' %>" alt=""></div> <h1 class=""><%- name %></h1>
+    </script>
+
+
+  </body>
+</html>

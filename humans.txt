@@ -1,0 +1,8 @@
+/* SITE */
+  App name: groupieology
+  Coders:  Anne Gentle (@annegentle), Everett Toews (@everett-toews), Kevin Davis (@kdavisk6), Daigo Fujiwara (@DaigoFuji)
+  Created: March 12, 2014 as part of Slahsathon, @SXSW
+  Standards: HTML5, CSS3
+  Components: Foundation jQuery, Orbit, Reveal
+  Software: Rackspace, Git
+  Github address: https://github.com/everett-toews/groupieology

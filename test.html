@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta name="generator"
+        content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+        <title></title>
+    </head>
+    <body>
+		<div id="groupiology-app">
+			<input id="search" type="text">
+			<button id="find-performer">Find Performer</button>
+			<div id="search-results"></div>
+		</div>
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/underscore-min.js"></script>
+		<script type="text/javascript" src="js/backbone-min.js"></script>
+		<script type="text/javascript" src="js/groupieology.js"></script>
+		<script type="text/template" id="search-result-template">
+			<div id="<%- id %>">
+				<a href="#/artist/<%- id %>"><h1><%- name %></h1></a>
+				<img src="<%- image %>">
+			</div>
+		</script>
+	</body>
+</html>

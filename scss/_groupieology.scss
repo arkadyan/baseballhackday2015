@@ -1,0 +1,88 @@
+// global
+
+.content-container {
+	min-height: 500px;
+}
+
+.logo {
+	color: $primary-color;
+}
+
+footer {
+	padding: 3rem 0; 
+	line-height: 1.5;
+	background-color: #ddd;
+	color: #777;
+	font-size: 85%;
+	a {
+		color: #666;
+	}
+}
+
+// Search box style 
+
+.input-search {
+	font-size: rem-calc(26); 
+	height: rem-calc(32);
+	font-weight: 300;
+	padding: 0;
+	width: 100%;
+	letter-spacing: -0.02em;
+	font-weight: 200;
+	font-family: 'Raleway', sans-serif;
+	font-style: normal;
+	border: 1px solid #fefefe;
+	padding: 0 15px;
+	outline: 0;
+	background: #fff;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 1rem;
+	@media #{$medium-up} {
+    	font-size: rem-calc(50); 
+		height: rem-calc(70);
+  	}
+}
+
+
+// artist results style
+.performer {
+	@extend .round;
+	height: 80px;
+	width: auto;
+	float: left;
+	margin-right: .6rem;
+	&:hover {
+		background: #f4f4f4;
+	}
+}
+.performer-photo {
+	width:80px;
+	overflow: hidden;
+}
+.performer-name {
+	display: inline-block;
+	margin: 25px 10px;
+}
+.event-map {
+	width: 100%;
+	height: 400px;
+}
+.performer-detail-photo {
+	width: 120px;
+	overflow: hidden;
+}
+
+//.icon-headphones {
+//	display:inline-block;
+//	width:128px;
+//	height:60px;
+//	background-image: url('img/headphones.svg');
+//	background-repeat: no-repeat;
+//}
