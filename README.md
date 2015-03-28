@@ -1,7 +1,4 @@
-groupieology
-============
+Baseball Hack Day 2015
+======================
 
-
-Using SASS Foundation (http://foundation.zurb.com/docs/sass.html)
-
-run 'compass watch'
+In progress
