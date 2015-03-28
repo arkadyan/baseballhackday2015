@@ -51,7 +51,7 @@ $(function() {
 		fetch: function(options) {
 			options = options || {};
 			options.dataType = 'json';
-			options.url = 'http://api.seatgeek.com/2/performers?q=' + this.searchKey;
+			options.url = 'http://api.seatgeek.com/2/performers?type=mlb&q=' + this.searchKey;
 
 			/* fetch the data */
 			return Backbone.Collection.prototype.fetch.call(this, options);
