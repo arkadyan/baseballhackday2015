@@ -122,9 +122,10 @@
         <div class="th">
 			<ul>
 			<% _.each(events, function(event) { %>
-				<li><input type="checkbox" id="event-<%= _.escape(event.id) %>"><div class="eventtitle"><i class="bb-<%= _.escape(event.performers[1].slug) %>"></i><%= _.escape(event.title) %><i class="bb-<%= _.escape(event.performers[0].slug) %>"></i></div><div class="eventmeta"><%= _.escape(event.venue.name) %>, <%= _.escape(event.venue.display_location) %>, <%= _.escape(event.datetime_local) %></div></input></li>
+				<li><input type="checkbox" id="<%= _.escape(event.id) %>"><div class="eventtitle"><i class="bb-<%= _.escape(event.performers[1].slug) %>"></i><%= _.escape(event.title) %><i class="bb-<%= _.escape(event.performers[0].slug) %>"></i></div><div class="eventmeta"><%= _.escape(event.venue.name) %>, <%= _.escape(event.venue.display_location) %>, <%= _.escape(event.datetime_local) %></div></input></li>
 			<% }); %>
 			</ul>
+			<button id="mapit">Map It!</button>
 		</div>
     </script>
 
