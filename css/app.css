@@ -9494,3 +9494,28 @@ footer a {
   width: 120px;
   overflow: hidden;
 }
+.th ul li {
+  list-style: none;
+  margin-bottom:0.7rem;
+}
+
+input[type="checkbox"] {
+  margin:0 1rem 0 0;
+}
+
+.eventtitle{
+  margin:0;
+  display:inline;
+}
+.eventmeta{
+  font-size:11px;
+  padding-left:25px;
+}
+
+.eventtitle i:nth-child(1) {
+  margin-right:5px;
+}
+
+.eventtitle i:nth-child(2) {
+  margin-left:5px;
+}

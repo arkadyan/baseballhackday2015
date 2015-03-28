@@ -81,75 +81,75 @@
 
 /* AL East */
 /* Boston Red Sox */
-.bb-bos:before, .bb-BOS:before, .bbclub-bos:before, .bbclub-BOS:before, .bb-Red:before { content: "A"; }
+.bb-boston-red-sox:before, .bb-bos:before, .bb-BOS:before, .bbclub-bos:before, .bbclub-BOS:before, .bb-Red:before { content: "A"; }
 /* New York Yankees* */
-.bb-nya:before, .bb-NYA:before, .bb-nyy:before, .bb-NYY:before, .bbclub-nya:before, .bbclub-NYA:before, .bbclub-nyy:before, .bbclub-NYY:before, .bb-Yankees:before { content: "B"; }
+.bb-new-york-yankees:before, .bb-nya:before, .bb-NYA:before, .bb-nyy:before, .bb-NYY:before, .bbclub-nya:before, .bbclub-NYA:before, .bbclub-nyy:before, .bbclub-NYY:before, .bb-Yankees:before { content: "B"; }
 /* Tampa Bay Rays* */
-.bb-tba:before, .bb-TBA:before, .bb-tb:before, .bb-TB:before, .bbclub-tba:before, .bbclub-TBA:before, .bbclub-tb:before, .bbclub-TB:before, .bb-Rays:before { content: "C"; }
+.bb-tampa-bay-rays:before, .bb-tba:before, .bb-TBA:before, .bb-tb:before, .bb-TB:before, .bbclub-tba:before, .bbclub-TBA:before, .bbclub-tb:before, .bbclub-TB:before, .bb-Rays:before { content: "C"; }
 /* Baltimore Orioles */
-.bb-bal:before, .bb-BAL:before, .bbclub-bal:before, .bbclub-BAL:before, .bb-Orioles:before { content: "D"; }
+.bb-baltimore-orioles:before, .bb-bal:before, .bb-BAL:before, .bbclub-bal:before, .bbclub-BAL:before, .bb-Orioles:before { content: "D"; }
 /* Toronto Blue Jays */
-.bb-tor:before, .bb-TOR:before, .bbclub-tor:before, .bbclub-TOR:before, .bb-Blue:before { content: "E"; }
+.bb-toronto-blue-jays:before, .bb-tor:before, .bb-TOR:before, .bbclub-tor:before, .bbclub-TOR:before, .bb-Blue:before { content: "E"; }
 
 /* AL Central */
 /* Detroit Tigers */
-.bb-det:before, .bb-DET:before, .bbclub-det:before, .bbclub-DET:before, .bb-Tigers:before { content: "F"; }
+.bb-detroit-tigers:before, .bb-det:before, .bb-DET:before, .bbclub-det:before, .bbclub-DET:before, .bb-Tigers:before { content: "F"; }
 /* Cleveland Indians */
-.bb-cle:before, .bb-CLE:before, .bbclub-cle:before, .bbclub-CLE:before, .bb-Indians:before { content: "G"; }
+.bb-cleveland-indians:before, .bb-cle:before, .bb-CLE:before, .bbclub-cle:before, .bbclub-CLE:before, .bb-Indians:before { content: "G"; }
 /* Kansas City Royals* */
-.bb-kca:before, .bb-KCA:before, .bb-kc:before, .bb-KC:before, .bbclub-kca:before, .bbclub-KCA:before, .bbclub-kc:before, .bbclub-KC:before, .bb-Royals:before { content: "H"; }
+.bb-kansas-city-royals:before, .bb-kca:before, .bb-KCA:before, .bb-kc:before, .bb-KC:before, .bbclub-kca:before, .bbclub-KCA:before, .bbclub-kc:before, .bbclub-KC:before, .bb-Royals:before { content: "H"; }
 /* Minnesota Twins */
-.bb-min:before, .bb-MIN:before, .bbclub-min:before, .bbclub-MIN:before, .bb-Twins:before { content: "I"; }
+.bb-minnesota-twins:before, .bb-min:before, .bb-MIN:before, .bbclub-min:before, .bbclub-MIN:before, .bb-Twins:before { content: "I"; }
 /* Chicago White Sox* */
-.bb-cha:before, .bb-CHA:before, .bb-cws:before, .bb-CWS:before, .bbclub-cha:before, .bbclub-CHA:before, .bbclub-cws:before, .bbclub-CWS:before, .bb-White:before { content: "J"; }
+.bb-chicago-white-sox:before, .bb-cha:before, .bb-CHA:before, .bb-cws:before, .bb-CWS:before, .bbclub-cha:before, .bbclub-CHA:before, .bbclub-cws:before, .bbclub-CWS:before, .bb-White:before { content: "J"; }
 
 /* AL West */
 /* Oakland Athletics */
-.bb-oak:before, .bb-OAK:before, .bbclub-oak:before, .bbclub-OAK:before, .bb-Athletics:before { content: "K"; }
+.bb-oakland-athletics:before, .bb-oak:before, .bb-OAK:before, .bbclub-oak:before, .bbclub-OAK:before, .bb-Athletics:before { content: "K"; }
 /* Texas Rangers */
-.bb-tex:before, .bb-TEX:before, .bbclub-tex:before, .bbclub-TEX:before, .bb-Rangers:before { content: "L"; }
+.bb-texas-rangers:before, .bb-tex:before, .bb-TEX:before, .bbclub-tex:before, .bbclub-TEX:before, .bb-Rangers:before { content: "L"; }
 /* Los Angeles Angels* */
-.bb-ana:before, .bb-ANA:before, .bb-laa:before, .bb-LAA:before, .bbclub-ana:before, .bbclub-ANA:before, .bbclub-laa:before, .bbclub-LAA:before, .bb-Angels:before { content: "M"; }
+.bb-los-angeles-angels:before, .bb-ana:before, .bb-ANA:before, .bb-laa:before, .bb-LAA:before, .bbclub-ana:before, .bbclub-ANA:before, .bbclub-laa:before, .bbclub-LAA:before, .bb-Angels:before { content: "M"; }
 /* Seattle Mariners */
-.bb-sea:before, .bb-SEA:before, .bbclub-sea:before, .bbclub-SEA:before, .bb-Mariners:before { content: "N"; }
+.bb-seattle-mariners:before, .bb-sea:before, .bb-SEA:before, .bbclub-sea:before, .bbclub-SEA:before, .bb-Mariners:before { content: "N"; }
 /* Houston Astros */
-.bb-hou:before, .bb-HOU:before, .bbclub-hou:before, .bbclub-HOU:before, .bb-Astros:before { content: "O"; }
+.bb-houston-astros:before, .bb-hou:before, .bb-HOU:before, .bbclub-hou:before, .bbclub-HOU:before, .bb-Astros:before { content: "O"; }
 
 /* NL East */
 /* Atlanta Braves */
-.bb-atl:before, .bb-ATL:before, .bbclub-atl:before, .bbclub-ATL:before, .bb-Braves:before { content: "P"; }
+.bb-atlanta-braves:before, .bb-atl:before, .bb-ATL:before, .bbclub-atl:before, .bbclub-ATL:before, .bb-Braves:before { content: "P"; }
 /* Washington Nationals* */
-.bb-was:before, .bb-WAS:before, .bb-wsh:before, .bb-WSH:before, .bbclub-was:before, .bbclub-WAS:before, .bbclub-wsh:before, .bbclub-WSH:before, .bb-Nationals:before { content: "Q"; }
+.bb-washington-nationals:before, .bb-was:before, .bb-WAS:before, .bb-wsh:before, .bb-WSH:before, .bbclub-was:before, .bbclub-WAS:before, .bbclub-wsh:before, .bbclub-WSH:before, .bb-Nationals:before { content: "Q"; }
 /* Philadelphia Phillies */
-.bb-phi:before, .bb-PHI:before, .bbclub-phi:before, .bbclub-PHI:before, .bb-Phillies:before { content: "R"; }
+.bb-philadelphia-phillies:before, .bb-phi:before, .bb-PHI:before, .bbclub-phi:before, .bbclub-PHI:before, .bb-Phillies:before { content: "R"; }
 /* New York Mets* */
-.bb-nyn:before, .bb-NYN:before, .bb-nym:before, .bb-NYM:before, .bbclub-nyn:before, .bbclub-NYN:before, .bbclub-nym:before, .bbclub-NYM:before, .bb-Mets:before { content: "S"; }
+.bb-new-york-mets:before, .bb-nyn:before, .bb-NYN:before, .bb-nym:before, .bb-NYM:before, .bbclub-nyn:before, .bbclub-NYN:before, .bbclub-nym:before, .bbclub-NYM:before, .bb-Mets:before { content: "S"; }
 /* Miami Marlins */
-.bb-mia:before, .bb-MIA:before, .bb-flo:before, .bb-FLO:before, .bb-fla:before, .bb-FLA:before, .bbclub-mia:before, .bbclub-MIA:before, .bbclub-flo:before, .bbclub-FLO:before, .bbclub-fla:before, .bbclub-FLA:before, .bb-Marlins:before { content: "T"; }
+.bb-miami-marlins:before, .bb-mia:before, .bb-MIA:before, .bb-flo:before, .bb-FLO:before, .bb-fla:before, .bb-FLA:before, .bbclub-mia:before, .bbclub-MIA:before, .bbclub-flo:before, .bbclub-FLO:before, .bbclub-fla:before, .bbclub-FLA:before, .bb-Marlins:before { content: "T"; }
 
 /* NL Central */
 /* Pittsburgh Pirates */
-.bb-pit:before, .bb-PIT:before, .bbclub-pit:before, .bbclub-PIT:before, .bb-Pirates:before { content: "U"; }
+.bb-pittsburgh-pirates:before, .bb-pit:before, .bb-PIT:before, .bbclub-pit:before, .bbclub-PIT:before, .bb-Pirates:before { content: "U"; }
 /* St. Louis Cardinals* */
-.bb-sln:before, .bb-SLN:before, .bb-stl:before, .bb-STL:before, .bbclub-sln:before, .bbclub-SLN:before, .bbclub-stl:before, .bbclub-STL:before, .bb-Cardinals:before { content: "V"; }
+.bb-st-louis-cardinals:before, .bb-sln:before, .bb-SLN:before, .bb-stl:before, .bb-STL:before, .bbclub-sln:before, .bbclub-SLN:before, .bbclub-stl:before, .bbclub-STL:before, .bb-Cardinals:before { content: "V"; }
 /* Cincinnati Reds */
-.bb-cin:before, .bb-CIN:before, .bbclub-cin:before, .bbclub-CIN:before, .bb-Reds:before { content: "W"; }
+.bb-cincinnati-reds:before, .bb-cin:before, .bb-CIN:before, .bbclub-cin:before, .bbclub-CIN:before, .bb-Reds:before { content: "W"; }
 /* Chicago Cubs */
-.bb-chn:before, .bb-CHN:before, .bb-chc:before, .bb-CHC:before, .bbclub-chn:before, .bbclub-CHN:before, .bbclub-chc:before, .bbclub-CHC:before, .bb-Cubs:before { content: "X"; }
+.bb-chicago-cubs:before, .bb-chn:before, .bb-CHN:before, .bb-chc:before, .bb-CHC:before, .bbclub-chn:before, .bbclub-CHN:before, .bbclub-chc:before, .bbclub-CHC:before, .bb-Cubs:before { content: "X"; }
 /* Milwaukee Brewers */
-.bb-mil:before, .bb-MIL:before, .bbclub-mil:before, .bbclub-MIL:before, .bb-Brewers:before { content: "Y"; }
+.bb-milwaukee-brewers:before, .bb-mil:before, .bb-MIL:before, .bbclub-mil:before, .bbclub-MIL:before, .bb-Brewers:before { content: "Y"; }
 
 /* NL West */
 /* Los Angeles Dodgers* */
-.bb-lan:before, .bb-LAN:before, .bb-la:before, .bb-LA:before, .bb-lad:before, .bb-LAD:before, .bbclub-lan:before, .bbclub-LAN:before, .bbclub-la:before, .bbclub-LA:before, .bbclub-lad:before, .bbclub-LAD:before, .bb-Dodgers:before { content: "Z"; }
+.bb-los-angeles-dodgers:before, .bb-lan:before, .bb-LAN:before, .bb-la:before, .bb-LA:before, .bb-lad:before, .bb-LAD:before, .bbclub-lan:before, .bbclub-LAN:before, .bbclub-la:before, .bbclub-LA:before, .bbclub-lad:before, .bbclub-LAD:before, .bb-Dodgers:before { content: "Z"; }
 /* Arizona Diamondbacks */
-.bb-ari:before, .bb-ARI:before, .bbclub-ari:before, .bbclub-ARI:before, .bb-Diamondbacks:before { content: "a"; }
+.bb-arizona-diamondbacks:before, .bb-ari:before, .bb-ARI:before, .bbclub-ari:before, .bbclub-ARI:before, .bb-Diamondbacks:before { content: "a"; }
 /* Colorado Rockies */
-.bb-col:before, .bb-COL:before, .bbclub-col:before, .bbclub-COL:before, .bb-Rockies:before { content: "b"; }
+.bb-colorado-rockies:before, .bb-col:before, .bb-COL:before, .bbclub-col:before, .bbclub-COL:before, .bb-Rockies:before { content: "b"; }
 /* San Francisco Giants* */
-.bb-sfn:before, .bb-SFN:before, .bb-sf:before, .bb-SF:before, .bbclub-sfn:before, .bbclub-SFN:before, .bbclub-sf:before, .bbclub-SF:before, .bb-Giants:before { content: "c"; }
+.bb-san-francisco-giants:before, .bb-sfn:before, .bb-SFN:before, .bb-sf:before, .bb-SF:before, .bbclub-sfn:before, .bbclub-SFN:before, .bbclub-sf:before, .bbclub-SF:before, .bb-Giants:before { content: "c"; }
 /* San Diego Padres* */
-.bb-sdn:before, .bb-SDN:before, .bb-sd:before, .bb-SD:before, .bbclub-sdn:before, .bbclub-SDN:before, .bbclub-sd:before, .bbclub-SD:before, .bb-Padres:before { content: "d"; }
+.bb-san-diego-padres:before, .bb-sdn:before, .bb-SDN:before, .bb-sd:before, .bb-SD:before, .bbclub-sdn:before, .bbclub-SDN:before, .bbclub-sd:before, .bbclub-SD:before, .bb-Padres:before { content: "d"; }
 
 /* Alternative logo */
 /* Boston Red Sox */
