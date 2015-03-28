@@ -1,18 +1,18 @@
 $(function() {
 	var Groupieology = Groupieology || {};
-	
+
 	Groupieology.Performer = Backbone.Model.extend({
-		
+
 	});
-	
+
 	Groupieology.Event = Backbone.Model.extend({
-	
+
 	});
-	
+
 	Groupieology.Venue = Backbone.Model.extend({
-	
+
 	});
-	
+
 	Groupieology.Events = Backbone.Collection.extend({
 		model: Groupieology.Event,
 		parse: function(data) {
@@ -22,7 +22,7 @@ $(function() {
 					events.push(v);
 				});
 			}
-			return events;			
+			return events;
 		},
 		fetch: function(options) {
 			options = options || {};
@@ -36,7 +36,7 @@ $(function() {
 			this.searchKey = key;
 		}
 	});
-	
+
 	Groupieology.Performers = Backbone.Collection.extend({
 		model: Groupieology.Performer,
 		parse: function(data) {
@@ -46,7 +46,7 @@ $(function() {
 					performers.push(v);
 				});
 			}
-			return performers;			
+			return performers;
 		},
 		fetch: function(options) {
 			options = options || {};
@@ -60,7 +60,7 @@ $(function() {
 			this.searchKey = key;
 		}
 	});
-	
+
 	Groupieology.PerformerView = Backbone.View.extend({
 		tagName: 'div',
 		className: 'performer',
@@ -68,7 +68,7 @@ $(function() {
 		render: function() {
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
-		}		
+		}
 	});
 
 	Groupieology.PerformerDetailView = Backbone.View.extend({
@@ -78,9 +78,9 @@ $(function() {
 		render: function() {
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
-		}		
+		}
 	});
-	
+
 
 	Groupieology.EventsView = Backbone.View.extend({
 		render: function() {
@@ -118,7 +118,7 @@ $(function() {
 					});
 				});
 			}
-			
+
 			for (var i = 0; i < locations.length; i++) {
 				var marker = new google.maps.Marker( {
 					position: locations[i].latlng,
@@ -143,38 +143,38 @@ $(function() {
 			map.fitBounds(latlngbounds);
 		}
 	});
-	
-	
+
+
 	Groupieology.AppView = Backbone.View.extend({
 		el: '#groupiology-app',
 		events: {
-			'keypress #search' : 'search'
+			'change #search' : 'search'
 		},
-		initialize : function() {	
-			/* set up a listener function to update the search results div when the 
+		initialize : function() {
+			/* set up a listener function to update the search results div when the
 			 * Performers collection has changed */
 			this.listenTo(Groupieology.performers, 'add', function(performer) {
 				/* create a new performer view */
 				var view = new Groupieology.PerformerView({ model: performer });
-				
-				/* append it to the search list */				
+
+				/* append it to the search list */
 				this.$('#content').append(view.render().el);
 			});
-			
+
 			this.listenTo(Groupieology.events, 'sync', function() {
 				var view = new Groupieology.EventsView({
 					model: Groupieology.events
 				});
-				
+
 				view.render();
 
 				/* find the performer clicked */
 				var currentArtist = new Groupieology.Performer(
 					Groupieology.performers.findWhere({ id: Groupieology.currentArtist})
 				);
-				var performerView = 
-					new Groupieology.PerformerDetailView({ 
-						model: currentArtist.attributes 
+				var performerView =
+					new Groupieology.PerformerDetailView({
+						model: currentArtist.attributes
 					});
 					this.$('#content').append(performerView.render().el);
 
@@ -182,21 +182,19 @@ $(function() {
 		},
 		search : function(event) {
 			/* get the performer term */
-			if (event.keyCode == 13) {
-				var $term = $('input[id="search"]').val();
-				Groupieology.performers.setSearchKey($term);
-				this.$('#content').empty();
-				
-				Groupieology.performers.fetch();
-			}
+			var $term = $('select[id="search"]').val();
+			Groupieology.performers.setSearchKey($term);
+			this.$('#content').empty();
+
+			Groupieology.performers.fetch();
 		}
 	});
-	
+
 	Groupieology.Router = Backbone.Router.extend({
 		routes: {
 			'artist/:id': 'showArtistMap'
 		},
-		
+
 		showArtistMap: function(id) {
 			/* get the events for an artist */
 			Groupieology.events = Groupieology.events || new Groupieology.Events();
@@ -206,7 +204,7 @@ $(function() {
 			Groupieology.currentArtist = parseInt(id, 10);
 		}
 	});
-	
+
 
 	Groupieology.performers = new Groupieology.Performers();
 	Groupieology.events = new Groupieology.Events();
