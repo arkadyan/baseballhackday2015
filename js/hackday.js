@@ -8,7 +8,7 @@ $(function() {
 			options = options || {};
 			options.dataType = 'json';
 			options.url = 'http://api.seatgeek.com/2/events?performers.id=' + this.get('team');
-			
+
 			/* fetch the data */
 			return Backbone.Model.prototype.fetch.call(this, options);
 		},
@@ -23,7 +23,7 @@ $(function() {
 			return this;
 		}
 	});
-	
+
 	Hackday.TeamView = Backbone.View.extend({
 		tagName: 'div',
 		template: _.template($('#event-template').html()),
@@ -32,36 +32,48 @@ $(function() {
 			return this;
 		}
 	});
-	
+
 	Hackday.Event = Backbone.Model.extend({});
 	Hackday.Events = Backbone.Collection.extend({
 		model: Hackday.event
 	});
-	
-	Hackday.AppView = Backbone.View.extend({
+
+  Hackday.Router = Backbone.Router.extend({
+    routes: {
+      'team/:id': 'team'
+    },
+
+    team: function(id) {
+      // Update the select box to correspond to the team we are looking at
+      $('select[id="teams"]').val(id);
+
+      /* update the model */
+      Hackday.team.set('team', id);
+      Hackday.team.fetch().success(function() {
+        $('#content').empty();
+        var view = new Hackday.TeamView({
+          model: Hackday.team
+        });
+
+        $('#content').append(view.render().el);
+      });
+    }
+  });
+
+  Hackday.AppView = Backbone.View.extend({
 		el: '#hackday-app',
 		events: {
-			'change #teams': 'getEventsForTeam',
+			'change #teams': 'navigateToTeam',
 			'click #mapit': 'mapIt'
 		},
-		getEventsForTeam: function() {
-			var team = $('select[id="teams"]').val();
-			
-			/* update the model */
-			Hackday.team.set('team', team);
-			Hackday.team.fetch().success(function() {
-				$('#content').empty();
-				var view = new Hackday.TeamView({
-					model: Hackday.team
-				});
-
-				$('#content').append(view.render().el);
-			});
-		},
+    navigateToTeam: function() {
+      var team = $('select[id="teams"]').val();
+      Hackday.router.navigate('team/' + team, {trigger: true});
+    },
 		mapIt: function() {
 			/* get the selected elements */
 			var selected = $('#content').find('input:checked');
-			
+
 			/* build up the event array to map */
 			var eventsToMap = [];
 			$.each(selected, function() {
@@ -77,7 +89,7 @@ $(function() {
 					eventsToMap.push(event);
 				}
 			});
-			
+
 			var locations = [];
 			var mapHolder = document.getElementById('event-map');
 			var mapOptions = {
@@ -135,8 +147,10 @@ $(function() {
 			map.fitBounds(latlngbounds);
 		}
 	});
-	
+
 	Hackday.team = new Hackday.Team();
 	Hackday.events = new Hackday.Events();
 	Hackday.app = new Hackday.AppView();
+  Hackday.router = new Hackday.Router();
+  Backbone.history.start();
 });
