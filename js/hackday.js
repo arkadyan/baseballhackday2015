@@ -66,10 +66,10 @@ $(function() {
 			'click #teams ul li': 'navigateToTeam',
 			'click #mapit': 'mapIt'
 		},
-    navigateToTeam: function(event) {
-      var team = $(event.target).data().teamId;
-      Hackday.router.navigate('team/' + team, {trigger: true});
-    },
+		navigateToTeam: function(event) {
+			var team = $(event.target).data().teamId;
+			Hackday.router.navigate('team/' + team, {trigger: true});
+		},
 		mapIt: function() {
 			/* get the selected elements */
 			var selected = $('#content').find('input:checked');
