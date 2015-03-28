@@ -183,7 +183,7 @@ $(function() {
 		search : function(event) {
 			/* get the performer term */
 			var teamId = $('select[id="search"]').val();
-      window.location = '/#/artist/' + teamId;
+      window.location = '#/artist/' + teamId;
 
 			Groupieology.performers.setArtistId(teamId);
 			Groupieology.performers.fetch();
