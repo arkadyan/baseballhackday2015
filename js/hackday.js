@@ -8,7 +8,7 @@ $(function() {
 			options = options || {};
 			options.dataType = 'json';
 			options.url = 'http://api.seatgeek.com/2/events?performers.id=' + this.get('team');
-			
+
 			/* fetch the data */
 			return Backbone.Model.prototype.fetch.call(this, options);
 		},
@@ -23,7 +23,7 @@ $(function() {
 			return this;
 		}
 	});
-	
+
 	Hackday.TeamView = Backbone.View.extend({
 		tagName: 'div',
 		template: _.template($('#event-template').html()),
@@ -32,13 +32,24 @@ $(function() {
 			return this;
 		}
 	});
-	
+
 	Hackday.Event = Backbone.Model.extend({});
 	Hackday.Events = Backbone.Collection.extend({
 		model: Hackday.event
 	});
-	
-	Hackday.AppView = Backbone.View.extend({
+
+  Hackday.Router = Backbone.Router.extend({
+    routes: {
+      'team/:id': 'team'
+    },
+
+    team: function(id) {
+      $('select[id="teams"]').val(id);
+      Hackday.app.getEventsForTeam();
+    }
+  });
+
+  Hackday.AppView = Backbone.View.extend({
 		el: '#hackday-app',
 		events: {
 			'change #teams': 'getEventsForTeam',
@@ -46,7 +57,7 @@ $(function() {
 		},
 		getEventsForTeam: function() {
 			var team = $('select[id="teams"]').val();
-			
+
 			/* update the model */
 			Hackday.team.set('team', team);
 			Hackday.team.fetch().success(function() {
@@ -61,7 +72,7 @@ $(function() {
 		mapIt: function() {
 			/* get the selected elements */
 			var selected = $('#content').find('input:checked');
-			
+
 			/* build up the event array to map */
 			var eventsToMap = [];
 			$.each(selected, function() {
@@ -77,7 +88,7 @@ $(function() {
 					eventsToMap.push(event);
 				}
 			});
-			
+
 			var locations = [];
 			var mapHolder = document.getElementById('event-map');
 			var mapOptions = {
@@ -135,8 +146,10 @@ $(function() {
 			map.fitBounds(latlngbounds);
 		}
 	});
-	
+
 	Hackday.team = new Hackday.Team();
 	Hackday.events = new Hackday.Events();
+  Hackday.router = new Hackday.Router();
+  Backbone.history.start();
 	Hackday.app = new Hackday.AppView();
 });
