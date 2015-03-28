@@ -39,3 +39,13 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.ui-menu {
+  width: 12em;
+
+  .ui-menu {
+    width: 15em;
+    height: 20em;
+    overflow-y: auto;
+  }
+}
