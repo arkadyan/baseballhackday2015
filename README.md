@@ -1,7 +1,7 @@
 Baseball Hack Day 2015
 ======================
 
-Follow your favorite team around the country!
+Follow your favorite baseball team around the country!
 
 Team members: Kevin Davis, Tyler Machado, and Matthew Shanley.
 
