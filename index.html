@@ -24,7 +24,7 @@
   </head>
 
 
-  <body id="groupiology-app">
+  <body id="hackday-app">
     <header class="row">
       <div class="large-12 columns">
         <h1 class="logo"><i class="fa fa-ticket"></i> Baseball Hack Day 2015</h1>
@@ -34,7 +34,7 @@
     <div class="row container-searchbox" >
       <div class="large-10 large-offset-1 columns ">
 
-        <select id="search" name="team-select">
+        <select id="teams" name="team-select">
           <option>Select Your Team</option>
           <option value='30'>Arizona Diamondbacks</option>
           <option value='2'>Atlanta Braves</option>
@@ -100,18 +100,20 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/underscore-min.js"></script>
     <script type="text/javascript" src="js/backbone-min.js"></script>
-    <script type="text/javascript" src="js/groupieology.js"></script>
+    <script type="text/javascript" src="js/hackday.js"></script>
 
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
 
     <!-- Backbone view templates -->
-
-    <script type="text/template" id="search-result-template">
-    </script>
-
-    <script type="text/template" id="performer-template">
-        <div class="th right performer-detail-photo"><img src="<%= image ? image : 'img/music.png' %>" alt=""></div> <h1 class=""><%- name %></h1>
+    <script type="text/template" id="event-template">
+        <div class="th">
+			<ul>
+			<% _.each(events, function(event) { %>
+				<li><input type="checkbox" id="event-<%= _.escape(event.id) %>"><%= _.escape(event.title) %></input></li>
+			<% }); %>
+			</ul>
+		</div>
     </script>
 
 
