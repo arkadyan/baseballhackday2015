@@ -51,13 +51,13 @@ $(function() {
 		fetch: function(options) {
 			options = options || {};
 			options.dataType = 'json';
-			options.url = 'http://api.seatgeek.com/2/performers?type=mlb&q=' + this.searchKey;
+			options.url = 'http://api.seatgeek.com/2/performers?type=mlb&id=' + this.artistId;
 
 			/* fetch the data */
 			return Backbone.Collection.prototype.fetch.call(this, options);
 		},
-		setSearchKey: function(key) {
-			this.searchKey = key;
+		setArtistId: function(id) {
+			this.artistId = id;
 		}
 	});
 
@@ -158,7 +158,7 @@ $(function() {
 				var view = new Groupieology.PerformerView({ model: performer });
 
 				/* append it to the search list */
-				this.$('#content').append(view.render().el);
+        // this.$('#content').append(view.render().el);
 			});
 
 			this.listenTo(Groupieology.events, 'sync', function() {
@@ -182,10 +182,10 @@ $(function() {
 		},
 		search : function(event) {
 			/* get the performer term */
-			var $term = $('select[id="search"]').val();
-			Groupieology.performers.setSearchKey($term);
-			this.$('#content').empty();
+			var teamId = $('select[id="search"]').val();
+      window.location = '/#/artist/' + teamId;
 
+			Groupieology.performers.setArtistId(teamId);
 			Groupieology.performers.fetch();
 		}
 	});
