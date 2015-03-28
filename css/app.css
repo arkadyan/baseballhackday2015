@@ -9462,70 +9462,79 @@ footer a {
 /* line 53, ../scss/_groupieology.scss */
 .th ul li {
   list-style: none;
+  margin-bottom: 0.7rem;
 }
 
-/* line 57, ../scss/_groupieology.scss */
+/* line 58, ../scss/_groupieology.scss */
 input[type="checkbox"] {
-  margin: 0 1rem 1rem 0;
+  margin: 0 1rem 0 0;
 }
 
-/* line 63, ../scss/_groupieology.scss */
+/* line 62, ../scss/_groupieology.scss */
+.eventtitle {
+  margin: 0;
+  display: inline;
+}
+
+/* line 66, ../scss/_groupieology.scss */
+.eventmeta {
+  font-size: 11px;
+  padding-left: 25px;
+}
+
+/* line 71, ../scss/_groupieology.scss */
+.eventtitle i:nth-child(1) {
+  margin-right: 5px;
+}
+
+/* line 75, ../scss/_groupieology.scss */
+.eventtitle i:nth-child(2) {
+  margin-left: 5px;
+}
+
+/* line 81, ../scss/_groupieology.scss */
 .performer {
   height: 80px;
   width: auto;
   float: left;
   margin-right: .6rem;
 }
-/* line 69, ../scss/_groupieology.scss */
+/* line 87, ../scss/_groupieology.scss */
 .performer:hover {
   background: #f4f4f4;
 }
 
-/* line 73, ../scss/_groupieology.scss */
+/* line 91, ../scss/_groupieology.scss */
 .performer-photo {
   width: 80px;
   overflow: hidden;
 }
 
-/* line 77, ../scss/_groupieology.scss */
+/* line 95, ../scss/_groupieology.scss */
 .performer-name {
   display: inline-block;
   margin: 25px 10px;
 }
 
-/* line 81, ../scss/_groupieology.scss */
+/* line 99, ../scss/_groupieology.scss */
 .event-map {
   width: 100%;
   height: 400px;
 }
 
-/* line 85, ../scss/_groupieology.scss */
+/* line 103, ../scss/_groupieology.scss */
 .performer-detail-photo {
   width: 120px;
   overflow: hidden;
 }
-.th ul li {
-  list-style: none;
-  margin-bottom:0.7rem;
-}
 
-input[type="checkbox"] {
-  margin:0 1rem 0 0;
+/* line 43, ../scss/app.scss */
+.ui-menu {
+  width: 12em;
 }
-
-.eventtitle{
-  margin:0;
-  display:inline;
-}
-.eventmeta{
-  font-size:11px;
-  padding-left:25px;
-}
-
-.eventtitle i:nth-child(1) {
-  margin-right:5px;
-}
-
-.eventtitle i:nth-child(2) {
-  margin-left:5px;
+/* line 46, ../scss/app.scss */
+.ui-menu .ui-menu {
+  width: 15em;
+  height: 20em;
+  overflow-y: auto;
 }
