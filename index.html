@@ -122,10 +122,10 @@
         <div class="th">
 			<ul>
 			<% _.each(events, function(event) { %>
-				<li>
+        <li>
           <input type="checkbox" id="<%= _.escape(event.id) %>"></input>
           <label for="<%= _.escape(event.id) %>">
-            <div class="eventtitle"><i class="bb-<%= _.escape(event.performers[1].slug) %>"></i><%= _.escape(event.title) %><i class="bb-<%= _.escape(event.performers[0].slug) %>"></i></div><div class="eventmeta"><%= _.escape(event.venue.name) %>, <%= _.escape(event.venue.display_location) %>, <%= _.escape(event.datetime_local) %></div>
+            <div class="eventtitle"><i class="bb-<%= _.escape(_.find(event.performers, function(performers) {if ( performers.away_team === true ) {return true;}}).slug) %>"></i><%= _.escape(event.short_title) %><i class="bb-<%= _.escape(_.find(event.performers, function(performers) {if ( performers.home_team === true ) {return true;}}).slug) %>"></i></div><div class="eventmeta"><%= _.escape(event.venue.name) %>, <%= _.escape(event.venue.display_location) %>, <%= _.escape(event.datetime_local) %></div>
           </label>
         </li>
 			<% }); %>
